@@ -3,8 +3,8 @@ import {useState} from "react";
 import "./../css/Navigation.css";
 
 const Navigation = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const[downArrow, setDownArrow] = useState(true);
+    const [menuOpen,setMenuOpen] = useState(false);
+    const [downArrow, setDownArrow] = useState(true);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -13,9 +13,8 @@ const Navigation = () => {
 
     return (
         <nav id="main-nav">
-            {/* <a onClick={toggleMenu} id="toggle-nav" href="#">{downarrow?"↓":"↑"};</a> */}
             <a onClick={toggleMenu} id="toggle-nav" href="#">
-                {downArrow?(<p>&darr;</p>) : (<p>&uarr;</p>)}
+                {downArrow?( <p>&darr;</p>): (<p>&uarr;</p>)}
             </a>
             <ul className={menuOpen?"":"hide-small"}>
                 <li><Link to="/">Home</Link></li>
